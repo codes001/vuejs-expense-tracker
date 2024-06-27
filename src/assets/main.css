@@ -88,6 +88,10 @@ input[type='number'] {
   width: 100%;
 }
 
+input:focus {
+  outline: none;
+}
+
 .btn {
   cursor: pointer;
   background-color: #9c88ff;

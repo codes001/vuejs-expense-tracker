@@ -17,6 +17,6 @@
         v-model="amount"
       />
     </div>
-    <button class="btn">Add transaction</button>
+    <button class="btn">Add</button>
   </form>
 </template>

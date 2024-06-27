@@ -18,6 +18,7 @@
 export default {
   data() {
     return {
+      //Transactions array should be empty by default
       transactions: [],
     };
   },

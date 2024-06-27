@@ -3,7 +3,7 @@
   <form>
     <div class="form-control">
       <label for="text">Text</label>
-      <input type="text" id="text" placeholder="Enter text..." v-model="text" />
+      <input type="text" id="text" placeholder="Add here..." v-model="text" />
     </div>
     <div class="form-control">
       <label for="amount"

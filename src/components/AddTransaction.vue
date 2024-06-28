@@ -6,10 +6,7 @@
       <input type="text" id="text" placeholder="Add here..." v-model="text" />
     </div>
     <div class="form-control">
-      <label for="amount"
-        >Amount <br />
-        (negative - expense, positive - income)</label
-      >
+      <label for="amount">Amount <br /> </label>
       <input
         type="text"
         id="amount"

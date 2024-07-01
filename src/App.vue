@@ -2,7 +2,7 @@
   <Header />
 
   <div class="container">
-    <Balance />
+    <Balance :total="total" />
     <IncomeExpenses />
     <TransactionList :transactions="transactions" />
     <AddTransaction />
@@ -36,7 +36,9 @@ const transactions = ref([
 ]);
 
 const total = computed(() => {
-  return transactions;
-  console.log(transactions);
+  return transactions.value.reduce((acc, transaction) => {
+    return acc + transaction.amount;
+  });
+  console.log(total);
 });
 </script>

@@ -11,6 +11,15 @@
       Paycheck <span> $230</span>
       <button class="delete-btn">X</button>
 </li> -->
+
+    <li
+      v-for="transaction in transactions"
+      :key="transaction.id"
+      :class="transaction.amount < 0 ? 'minus' : 'plus'"
+    >
+      {{ transaction.text }} <span> ${{ transaction.amount }} </span>
+      <button class="delete-btn">X</button>
+    </li>
   </ul>
 </template>
 

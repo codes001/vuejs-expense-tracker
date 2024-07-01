@@ -1,7 +1,7 @@
 <template>
   <h3>History</h3>
   <ul id="list" class="list">
-    //CLASSES TO BE MADE DYNAMIC
+    <!-- CLASSES TO BE MADE DYNAMIC -->
     <!-- <li class="minus">
       Cash <span> -$400</span>
       <button class="delete-btn">X</button>
@@ -14,13 +14,13 @@
   </ul>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      //Transactions array should be empty by default
-      transactions: [],
-    };
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  transactions: {
+    type: array,
+    required: true,
   },
-};
+});
 </script>

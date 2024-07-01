@@ -65,6 +65,8 @@ const handleTransactionSubmitted = (transactionData) => {
     text: transactionData.text,
     amount: transactionData.amount,
   });
+  saveTransactionsToLocalStorage();
+
   toast.success('Transaction added successfully');
 };
 //UNIQUE IDs
@@ -77,7 +79,13 @@ const handleTransactionDeleted = (id) => {
   transactions.value = transactions.value.filter(
     (transaction) => transaction.id !== id
   );
+  saveTransactionsToLocalStorage();
 
   toast.success('Transaction deleted successfully');
+};
+
+//STORE TRANSACTIONS IN LOCL STORAGE
+const saveTransactionsToLocalStorage = () => {
+  localStorage.setItem('transactions', JSON.stringify(transactions.value));
 };
 </script>

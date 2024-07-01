@@ -91,7 +91,10 @@ input[type='number'] {
 input:focus {
   outline: none;
 }
-
+::placeholder,
+input {
+  font-family: 'Poppins', sans-serif;
+}
 .btn {
   cursor: pointer;
   background-color: #021a25;

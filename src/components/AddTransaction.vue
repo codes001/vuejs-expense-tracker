@@ -1,6 +1,6 @@
 <template>
   <h3>Add new transaction</h3>
-  <form>
+  <form id="form" @submit.prevent="onSubmit">
     <div class="form-control">
       <label for="text">Text</label>
       <input type="text" id="text" placeholder="Add here..." v-model="text" />
@@ -18,8 +18,6 @@
   </form>
 </template>
 
-<script>
-export default {
-  
-}
+<script setup>
+const onSubmit = () => {};
 </script>

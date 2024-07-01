@@ -15,7 +15,7 @@ import Balance from './components/Balance.vue';
 import AddTransaction from './components/AddTransaction.vue';
 import TransactionList from './components/TransactionList.vue';
 import IncomeExpenses from './components/IncomeExpenses.vue';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const transactions = ref([
   {
@@ -34,4 +34,9 @@ const transactions = ref([
     amount: -8,
   },
 ]);
+
+const total = computed(() => {
+  return transactions;
+  console.log(transactions);
+});
 </script>

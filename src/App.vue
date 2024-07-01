@@ -20,25 +20,16 @@ import TransactionList from './components/TransactionList.vue';
 import IncomeExpenses from './components/IncomeExpenses.vue';
 import { useToast } from 'vue-toastification';
 
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 const toast = useToast();
-const transactions = ref([
-  {
-    id: 1,
-    text: 'Flower',
-    amount: 15.02,
-  },
-  {
-    id: 2,
-    text: 'Book',
-    amount: 130,
-  },
-  {
-    id: 3,
-    text: 'Food',
-    amount: 8,
-  },
-]);
+const transactions = ref([]);
+onMounted(() => {
+  const savedTransactions = JSON.parse(localStorage.getItem('transactions'));
+
+  if (savedTransactions) {
+    transactions.value = savedTransactions;
+  }
+});
 
 //BALANCE SUM
 const total = computed(() => {

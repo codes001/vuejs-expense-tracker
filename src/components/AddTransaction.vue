@@ -17,3 +17,9 @@
     <button class="btn">Add</button>
   </form>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
